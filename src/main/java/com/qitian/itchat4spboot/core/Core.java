@@ -2,6 +2,7 @@ package com.qitian.itchat4spboot.core;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.qitian.itchat4spboot.utils.enums.parameters.BaseParaEnum;
 import lombok.Data;
 
 import java.util.ArrayList;
