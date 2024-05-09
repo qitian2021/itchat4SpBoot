@@ -3,6 +3,7 @@ package com.qitian.itchat4spboot.core;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.qitian.itchat4spboot.entity.BaseMsg;
+import com.qitian.itchat4spboot.imsgHandler.IMsgHandlerFace;
 import com.qitian.itchat4spboot.utils.enums.MsgCodeEnum;
 import com.qitian.itchat4spboot.utils.enums.MsgTypeEnum;
 import com.qitian.itchat4spboot.utils.tools.CommonTools;
