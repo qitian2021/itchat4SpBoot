@@ -9,15 +9,13 @@ import com.qitian.itchat4spboot.utils.tools.CommonTools;
 import com.qitian.itchat4spboot.utils.tools.WechatTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
 
 /**
  * 登陆控制器
- * 
- * @author https://github.com/yaphone
- * @date 创建时间：2017年5月13日 下午12:56:07
- * @version 1.0
  *
  */
+@Controller
 public class LoginController {
 	private static Logger LOG = LoggerFactory.getLogger(LoginController.class);
 	private ILoginService loginService = new LoginServiceImpl();
