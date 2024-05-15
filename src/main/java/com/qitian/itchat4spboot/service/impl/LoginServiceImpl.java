@@ -91,6 +91,9 @@ public class LoginServiceImpl implements ILoginService {
 		return isLogin;
 	}
 
+	/**
+	 * 发送HTTP GET请求，获取服务器响应，并从响应做获取uuid
+	 * */
 	@Override
 	public String getUuid() {
 		// 组装参数和URL
@@ -100,10 +103,13 @@ public class LoginServiceImpl implements ILoginService {
 		params.add(new BasicNameValuePair(UUIDParaEnum.LANG.para(), UUIDParaEnum.LANG.value()));
 		params.add(new BasicNameValuePair(UUIDParaEnum._.para(), String.valueOf(System.currentTimeMillis())));
 
+		// 获取服务端返回的响应
 		HttpEntity entity = httpClient.doGet(URLEnum.UUID_URL.getUrl(), params, true, null);
 
 		try {
 			String result = EntityUtils.toString(entity);
+			// 定义正则表达式，用于匹配响应字符串中的特定内容。
+			// 该正则表达式用于查找window.QRLogin.code和window.QRLogin.uuid的值。
 			String regEx = "window.QRLogin.code = (\\d+); window.QRLogin.uuid = \"(\\S+?)\";";
 			Matcher matcher = CommonTools.getMatcher(regEx, result);
 			if (matcher.find()) {

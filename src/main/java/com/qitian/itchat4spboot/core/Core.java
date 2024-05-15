@@ -34,7 +34,14 @@ public class Core {
 		return instance;
 	}
 
+	/**
+	 * 微信存活状态
+	 * */
 	boolean alive = false;
+
+	/**
+	 *
+	 * */
 	private int memberCount = 0;
 
 	private String indexUrl;
