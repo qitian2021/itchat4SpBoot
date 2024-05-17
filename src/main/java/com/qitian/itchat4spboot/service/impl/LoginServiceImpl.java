@@ -48,10 +48,6 @@ public class LoginServiceImpl implements ILoginService {
 
 	private MyHttpClient myHttpClient = core.getMyHttpClient();
 
-	public LoginServiceImpl() {
-
-	}
-
 	@Override
 	public boolean login() {
 
